@@ -2,7 +2,7 @@
 // @name            Unfuck old.reddit.com video player
 // @author          ArhoM
 // @description     Replaces old.reddit.com video player with built-in player of web browser
-// @version         1.0.0
+// @version         1.0.1
 // @namespace       https://github.com/sinf/old-reddit-video-builtin/
 // @downloadURL     https://github.com/sinf/old-reddit-video-builtin/raw/main/script.js
 // @license         MIT
@@ -20,7 +20,7 @@ function fixup128794(x) {
   // need a wrapper div because styles
   let newx = jQuery('<div>', {
       id: x[0].id,
-      class: x[0].class,
+      class: x.attr('class'),
   });
   
   let vid = x.find('video');
