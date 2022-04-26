@@ -2,7 +2,7 @@
 // @name            Unfuck old.reddit.com video player
 // @author          ArhoM
 // @description     Replaces old.reddit.com video player with built-in player of web browser
-// @version         100
+// @version         1.0.0
 // @namespace       https://github.com/sinf/old-reddit-video-builtin/
 // @downloadURL     https://github.com/sinf/old-reddit-video-builtin/raw/main/script.js
 // @license         MIT
