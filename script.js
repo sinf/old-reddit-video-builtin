@@ -4,6 +4,7 @@
 // @description     Replaces old.reddit.com video player with built-in player of web browser
 // @version         1
 // @namespace       https://github.com/sinf/old-reddit-video-builtin/
+// @license         MIT
 // @include         https://old.reddit.com/r/*
 // @require         https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 // @require         https://gist.github.com/raw/2625891/waitForKeyElements.js
