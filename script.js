@@ -8,7 +8,7 @@
 // @license         MIT
 // @include         https://old.reddit.com/r/*
 // @require         https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
-// @require         https://gist.github.com/raw/2625891/waitForKeyElements.js
+// @require         https://github.com/sinf/old-reddit-video-builtin/raw/main/waitForKeyElements.js
 // @grant           GM_addStyle
 // @run-at          document-start
 // ==/UserScript==
