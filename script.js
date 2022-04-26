@@ -2,9 +2,8 @@
 // @name            Unfuck old.reddit.com video player
 // @author          ArhoM
 // @description     Replaces old.reddit.com video player with built-in player of web browser
-// @version         1
+// @version         100
 // @namespace       https://github.com/sinf/old-reddit-video-builtin/
-// @license         MIT
 // @include         https://old.reddit.com/r/*
 // @require         https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 // @require         https://gist.github.com/raw/2625891/waitForKeyElements.js
@@ -16,14 +15,20 @@ function fixup128794(x) {
   // for some reason removing events/callbacks from x isnt working
   // so why not delete the entire js-infested subtree of useless divs
   
+  // need a wrapper div because styles
+  let newx = jQuery('<div>', {
+      id: x[0].id,
+      class: x[0].class,
+  });
+  
   let vid = x.find('video');
   vid.off();
   vid.attr({'controls':true, 'id':'unfucked_video'});
-  vid.addClass('reddit-video-player-root'); // avoid breaking css layout
+  vid.appendTo(newx);
   
   let par = x.parent();
   par.children().remove();
-  par.append(vid);
+  par.append(newx);
   x.remove();
 }
 
@@ -33,7 +38,8 @@ function fixup128793(x) {
   fixup128794(x);
 }
 
-let my_root_q = ".media-preview-content.video-player div.reddit-video-player-root";
+// must not match the new wrapper element
+let my_root_q = ".media-preview-content.video-player div.reddit-video-player-root[data-mpd-url]";
 
 waitForKeyElements(my_root_q, fixup128793);
 
