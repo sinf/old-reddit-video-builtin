@@ -2,7 +2,7 @@
 // @name            Unfuck old.reddit.com video player
 // @author          ArhoM
 // @description     Replaces old.reddit.com video player with built-in player of web browser
-// @version         1.0.2
+// @version         1.0.3
 // @namespace       https://github.com/sinf/old-reddit-video-builtin/
 // @downloadURL     https://github.com/sinf/old-reddit-video-builtin/raw/main/script.js
 // @license         MIT
@@ -10,7 +10,7 @@
 // @require         https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 // @require         https://github.com/sinf/old-reddit-video-builtin/raw/main/waitForKeyElements.js
 // @grant           GM_addStyle
-// @run-at          document-start
+// @run-at          document-end
 // ==/UserScript==
 
 function fixup128794(x) {
